@@ -19,9 +19,9 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          <link rel="icon" href="favicon.ico" />
+          <link rel="icon" href="favicon.png" />
 
-          <link rel="apple-touch-icon" href="../public/images/logo.svg" />
+          <link rel="icon" sizes="56x56" href="../public/favicon.png" />
 
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link
@@ -29,16 +29,18 @@ class MyDocument extends Document {
             href="https://fonts.gstatic.com"
             crossOrigin={"true"}
           />
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link
-            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap"
-            rel="stylesheet"
+            rel="preconnect"
+            href="https://fonts.gstatic.com"
+            crossOrigin={"true"}
           />
           <link
-            href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,500;0,900;1,500;1,700&family=Nunito:ital,wght@0,200;0,400;0,500;0,600;0,700;0,800;1,200&display=swap"
             rel="stylesheet"
           />
         </Head>
-        <body >
+        <body>
           <Main />
           <NextScript />
         </body>

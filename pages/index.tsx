@@ -1,81 +1,112 @@
+import Footer from "@components/Footer/Footer";
 import Link from "next/link";
-import { Footer } from "../components";
-
-const url = "https://d1qlwo81ldzrjs.cloudfront.net/prod/";
-export const LogoImages = {
-  SIL_Logo: `${url}sil_logo_images/SIL-Logo.png`,
-  SIL_Logo_Small: `${url}sil_logo_images/SIL-Logo-Small.jpg`,
-  SIL_Logo_White: `${url}sil_logo_images/SIL-Logo-White.png`,
-  SLADE_Logo_White: `${url}sil_logo_images/SLADE-Logo-White.png`,
-  SLADE_Logo_Small: `${url}sil_logo_images/SLADE-Logo-Small.png`,
-  SLADE_Logo: `${url}sil_logo_images/SLADE-Logo.png`,
-  Favicon: `${url}sil_logo_images/favicon.png`,
-};
+import eventLogger from "@utils/utilities";
+import heroImage from "@public/assets/net.png";
+import cloudImage from "@public/assets/cloud.png";
+import { FaRocket } from "react-icons/fa";
+import Image from "next/image";
 
 export default function Home() {
   return (
     <div className="flex flex-col pt-[64px] items-center justify-center">
-      <h2 className="sm:text-4xl text-2xl text-black font-bold text-center tracking-wide pt-16">
-        Digital infrastructure for <br /> healthcare
-      </h2>
-
-      <p className="text-center pt-4 text-[#5A6980]">
-        4000+ healthcare providers and insurance companies across <br />
-        Africa use our software and APIs to deliver quality <br />
-        healthcare and wellness services
-      </p>
-
-      <div className="flex my-6">
-        <input
-          type="text"
-          placeholder="Your Email Address"
-          className="outline-none rounded-md mx-2 h-9 px-2 shadow-md w-72"
-        />
-        <Link
-          href="#getting-started"
-          className=" text-white bg-brandColor text-sm h-9 px-2 flex items-center justify-center rounded-md"
-        >
-          Getting Started
-        </Link>
-      </div>
-
-      <div className="flex h-50vh my-6">
-        <img src="/preauth.png" alt="" />
-      </div>
-
-      <div className="flex flex-col my-4 h-60 w-full justify-center items-center">
-        <h2 className="text-[#5A6980] text-xl">
-          Powering leading companies like
-        </h2>
-        <div className="flex justify-around w-2/3 my-2">
-          <img
-            src="/madison.png"
-            alt="Business Partner Logo"
-            className="h-16 w-40 bg-white shadow-md"
-          />
-          <img
-            src="/madison.png"
-            alt="Business Partner Logo"
-            className="h-16 w-40 bg-white shadow-md"
-          />
-          <img
-            src="/madison.png"
-            alt="Business Partner Logo"
-            className="h-16 w-40 bg-white shadow-md"
-          />
-          <img
-            src="/madison.png"
-            alt="Business Partner Logo"
-            className="h-16 w-40 bg-white shadow-md"
-          />
-          <img
-            src="/madison.png"
-            alt="Business Partner Logo"
-            className="h-16 w-40 bg-white shadow-md"
-          />
+      <div className=" w-full lg:w-[80%] max-w-[1500px] flex flex-col justify-between lg:items-center max-h-[1200px] md:justify-start md:items-start lg:h-[calc(100vh-50px)] lg:min-h-fit md:min-h-fit md:h-[50vh]sm:min-h-[auto]">
+        <div className="flex lg:flex-1 justify-between items-center lg:w-[100%]  md:w-full sm:w-[100vw] h-full md:h-[50vh] lg:px-1 p-6 sm:px-16">
+          <div className="flex lg:flex-col lg:flex-1 flex-initial w-full items-center sm:justify-center justify-start">
+            <div className=" lg:w-full min-h-fit flex flex-col items-start">
+              <span
+                className="text-transparent text-cyBlack
+              md:text-[3.6rem] lg:text-[3.9rem] sm:text-5xl text-[2.4rem] font-bold lg:text-left md:leading-[5rem] md:tracking-wide lg:leading-[5.1rem] sm:leading-[4rem] leading-snug tracking-wide lg:tracking-normal"
+              >
+                Data Solutions <br />
+                for{" "}
+                <span className="font-bold text-transparent bg-secondary bg-clip-text">
+                  Change{" "}
+                </span>
+                Makers
+              </span>
+              <p className="pt-4 lg:pr-16 text-zinc-700 font-[500] leading-8 tracking-normal lg:w-full max-w-[1700px] w-full md:w-full sm:w-full">
+                We derive insights that allow you to reach the data decisions
+                you need instantly. We make sharing your findings easy with
+                attractive data reports and visuals designed just for your
+                Audience.
+              </p>
+              <div className="flex my-6">
+                <Link
+                  href={"#getting-started"}
+                  className=" text-white bg-primary text-sm h-10 w-56 flex items-center justify-center rounded-full font-semibold"
+                  onClick={() =>
+                    eventLogger({
+                      name: "Getting Started",
+                      details: {
+                        action: "click",
+                        meta: "Getting started from landing page",
+                      },
+                    })
+                  }
+                >
+                  Get Started
+                  <span className="pl-2 animate-pulse font-bold text-onPrimary">
+                    <FaRocket />
+                  </span>
+                </Link>
+              </div>
+            </div>
+          </div>
+          <div className="lg:flex md:hidden sm:hidden flex-1 lg:justify-end items-center md:justify-start h-full overflow-hidden">
+            <div className="relative lg:min-h-[700px] lg:h-[30%] h-full w-[75%] lg:max-h-[100%] lg:max-w-[100%]">
+              <Image src={heroImage} alt="Landing Image" fill />
+            </div>
+          </div>
         </div>
       </div>
+      <div
+        id="getting-started"
+        className="flex flex-col min-h-[70vh] w-full lg:w-[80%] max-w-[1500px] px-8"
+      >
+        <h2 className="font-bold lg:text-4xl text-2xl text-center mb-2">
+          Our mission is to bring <br /> Sustainalibility to Businesses
+        </h2>
 
+        <div className="flex flex-col py-4">
+          <h3 className="font-bold text-xl ">
+            What is <span className="text-secondary">CYMON</span>
+          </h3>
+          <div className="flex justify-between lg:flex-row flex-col">
+            <div className="flex flex-col lg:w-[50%] w-full ">
+              <p className="mt-4">
+                Is a cybersecurity assessment tool to assist CSOs with a quick
+                and easy means to identify strengths and weaknesses with an
+                organizational cybersecurity approach, as well as provide
+                resources for a personalized response and recommendation for
+                improvement in existing policies.
+              </p>
+
+              <form className="flex flex-col my-4">
+                <h4>Enter Organisation Name or Alias to proceed</h4>
+                <input
+                  type="text"
+                  required
+                  placeholder="Organisation Name"
+                  className="outline-none border-b-2 border-primary w-[250px] h-9 bg-transparent text-sm focus:text-lg mt-2 focus:border-secondary transition-all ease-in-out"
+                />
+
+                <button
+                  type="submit"
+                  className="bg-secondary rounded-full w-[250px] mt-4 h-9 text-white"
+                >
+                  Take Assessment
+                </button>
+              </form>
+            </div>
+
+            <div className="lg:w-[50%] w-[100%] min-w-[300px] flex items-center justify-center">
+              <div className="relative h-[100%] w-[40%]">
+                <Image alt="Cloud Image" src={cloudImage} fill />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <Footer />
     </div>
   );

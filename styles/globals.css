@@ -2,10 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-/* @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,500;0,900;1,500;1,700&display=swap"); */
-
 * {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Nunito", sans-serif;
+  scroll-behavior: smooth;
 }
 html,
 body {
@@ -13,4 +12,27 @@ body {
   margin: 0;
   overflow-x: hidden;
   background-color: #f7f8fa;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 100vh;
+  background: #dadbd3;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #011c30;
+  border-radius: 100vh;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #f16722;
 }
