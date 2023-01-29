@@ -2,4 +2,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.healthcloud.slade360.com/sitemap.xml
+Sitemap: https://cymon.vercel.app/sitemap.xml

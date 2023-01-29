@@ -23,11 +23,11 @@ export default function NavBar({
     <>
       <Header />
       <nav
-        className={`z-[999] flex items-center h-[80px] justify-center overflow-auto  shadow-sm transition-transform
+        className={`z-[999] flex items-center h-[80px] justify-center shadow-sm transition-none ease-in duration-75
         bg-fill ${
           colorChange
             ? "shadow-md bg-primary text-white fixed top-0 w-full"
-            : "bg-white bg-cover absolute lg:top-[40px] top-0 self-center lg:w-[80%] w-full h-[70px] rounded-full"
+            : "bg-white bg-cover absolute lg:top-[40px] top-0 self-center lg:w-[80%] w-full h-[70px] lg:rounded-full rounded-none"
         }
        } md:px-4 sm:px-4`}
         data-testid="nav"
@@ -48,7 +48,7 @@ export default function NavBar({
         {toggleMenu ? (
           <MdClose
             onClick={() => setToggleMenu(!toggleMenu)}
-            className="lg:hidden block text-4xl mr-2 p-1 cursor-pointer text-secondary bg-white  hover:bg-gray-100 focus:bg-gray-100 focus:ring-2 focus:ring-gray-100 rounded"
+            className="lg:hidden block text-4xl mr-2 p-1 cursor-pointer text-secondary bg-gray-100  hover:bg-gray-100 focus:bg-gray-100 focus:ring-2 focus:ring-gray-100 rounded"
             data-testid="close-menu"
           />
         ) : (

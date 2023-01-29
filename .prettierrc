@@ -1,3 +1,4 @@
 {
-  "singleQuotes": false
+  "singleQuotes": false,
+  "semi": true
 }

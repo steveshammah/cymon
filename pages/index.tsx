@@ -3,10 +3,22 @@ import Link from "next/link";
 import eventLogger from "@utils/utilities";
 import heroImage from "@public/assets/net.png";
 import cloudImage from "@public/assets/cloud.png";
-import { FaRocket } from "react-icons/fa";
 import Image from "next/image";
+import { useAppStore } from "@stores/appStore";
+import { useState } from "react";
+import { useRouter } from "next/router";
 
 export default function Home() {
+  const [username, setUsername] = useState<string>();
+  const { setOrg, alias } = useAppStore();
+
+  const router = useRouter();
+
+  const handleSubmit = (e: any) => {
+    e.preventDefault();
+    setOrg({ alias: username });
+    router.push("/assessments");
+  };
   return (
     <div className="flex flex-col pt-[64px] items-center justify-center">
       <div className=" w-full lg:w-[80%] max-w-[1500px] flex flex-col justify-between lg:items-center max-h-[1200px] md:justify-start md:items-start lg:h-[calc(100vh-50px)] lg:min-h-fit md:min-h-fit md:h-[50vh]sm:min-h-[auto]">
@@ -45,9 +57,6 @@ export default function Home() {
                   }
                 >
                   Get Started
-                  <span className="pl-2 animate-pulse font-bold text-onPrimary">
-                    <FaRocket />
-                  </span>
                 </Link>
               </div>
             </div>
@@ -61,10 +70,10 @@ export default function Home() {
       </div>
       <div
         id="getting-started"
-        className="flex flex-col min-h-[70vh] w-full lg:w-[80%] max-w-[1500px] px-8"
+        className="flex flex-col min-h-[50vh] w-full lg:w-[80%] max-w-[1500px] px-8"
       >
         <h2 className="font-bold lg:text-4xl text-2xl text-center mb-2">
-          Our mission is to bring <br /> Sustainalibility to Businesses
+          Our mission is to bring <br /> Sustainability to Businesses
         </h2>
 
         <div className="flex flex-col py-4">
@@ -81,22 +90,32 @@ export default function Home() {
                 improvement in existing policies.
               </p>
 
-              <form className="flex flex-col my-4">
-                <h4>Enter Organisation Name or Alias to proceed</h4>
-                <input
-                  type="text"
-                  required
-                  placeholder="Organisation Name"
-                  className="outline-none border-b-2 border-primary w-[250px] h-9 bg-transparent text-sm focus:text-lg mt-2 focus:border-secondary transition-all ease-in-out"
-                />
-
-                <button
-                  type="submit"
-                  className="bg-secondary rounded-full w-[250px] mt-4 h-9 text-white"
+              {alias ? (
+                <Link
+                  href="/assessments"
+                  className="bg-secondary rounded-full w-fit px-6 mt-4 h-9 text-white flex items-center justify-center"
                 >
-                  Take Assessment
-                </button>
-              </form>
+                  Assessments
+                </Link>
+              ) : (
+                <form className="flex flex-col my-4" onSubmit={handleSubmit}>
+                  <h4>Enter Organisation Name or Alias to proceed</h4>
+                  <input
+                    type="text"
+                    required
+                    placeholder="Organisation Name"
+                    className="outline-none border-b-2 border-primary w-[250px] h-9 bg-transparent text-sm focus:text-lg mt-2 focus:border-secondary transition-all ease-in-out"
+                    onChange={(e) => setUsername(e.target.value)}
+                  />
+
+                  <button
+                    type="submit"
+                    className="bg-secondary rounded-full w-[250px] mt-4 h-9 text-white"
+                  >
+                    Take Assessment
+                  </button>
+                </form>
+              )}
             </div>
 
             <div className="lg:w-[50%] w-[100%] min-w-[300px] flex items-center justify-center">
