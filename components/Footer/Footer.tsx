@@ -76,8 +76,8 @@ const Footer = () => {
         <span className="text-xs  flex items-center justify-center  ">
           Copyright &copy;
           <Link href="https://fourbic.com/" target={"_blank"}>
-            {new Date().getFullYear()} CYMON by{" "}
-            <span className="text-secondary font-bold">Fourbic</span>
+            {new Date().getFullYear()} by{" "}
+            <span className="text-primary font-bold">Takeover</span>
           </Link>
         </span>
       </div>
