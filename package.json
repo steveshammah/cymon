@@ -1,5 +1,5 @@
 {
-  "name": "cymon",
+  "name": "takeover",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -21,7 +21,13 @@
     "react-dom": "18.2.0",
     "react-icons": "^4.6.0",
     "typescript": "4.8.4",
-    "zustand": "^4.3.2"
+    "zustand": "^4.3.2",
+    "mobx": "6.8.0",
+    "styled-components": "5.3.6",
+    "core-js": "3.28.0",
+    "react-is": "16.8.0",
+    "redoc": "2.0.0"
+
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^5.16.5",

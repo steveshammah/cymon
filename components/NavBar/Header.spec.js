@@ -5,7 +5,7 @@ describe("Header Component Test", () => {
   it("should render the header", () => {
     render(<Header />);
 
-    const headerText = screen.getByText(/cymon/i);
+    const headerText = screen.getByText(/takeover/i);
 
     expect(headerText).toBeInTheDocument();
   });

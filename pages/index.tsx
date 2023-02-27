@@ -73,12 +73,12 @@ export default function Home() {
         className="flex flex-col min-h-[50vh] w-full lg:w-[80%] max-w-[1500px] px-8"
       >
         <h2 className="font-bold lg:text-4xl text-2xl text-center mb-2">
-          Our mission is to bring <br /> Sustainability to Businesses
+          Our mission is to transform <br /> Media using modern technology
         </h2>
 
         <div className="flex flex-col py-4">
           <h3 className="font-bold text-xl ">
-            What is <span className="text-secondary">CYMON</span>
+            What is <span className="text-secondary">Takeover Media</span>
           </h3>
           <div className="flex justify-between lg:flex-row flex-col">
             <div className="flex flex-col lg:w-[50%] w-full ">

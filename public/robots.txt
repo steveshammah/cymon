@@ -2,4 +2,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://cymon.vercel.app/sitemap.xml
+Sitemap: https://takeover.vercel.app/sitemap.xml

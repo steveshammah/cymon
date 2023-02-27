@@ -4,52 +4,59 @@ import React from "react";
 export default function Header() {
   return (
     <Head>
-      <title>CYMON | cybersecurity assessment needs </title>
+      <title>Takeover Media </title>
       <meta charSet="utf-8" />
       <meta
         name="description"
-        content="We derive insights that allow you to reach the data decisions you need instantly. We make sharing your findings easy with attractive data reports and visuals designed just for your Audience."
+        content="We aim to transform mainstream media using tech and high end coverage of events."
         key="desc"
       />
       <meta name="viewport" content="width=device-width" />
 
-      <meta property="og:title" content="CYMON by Fourbic" />
+      <meta property="og:title" content="Takeover Media by Shammah" />
       <meta property="og:type" content="website" />
 
       <meta
         name="og:description"
-        content="We derive insights that allow you to reach the data decisions you need instantly. We make sharing your findings easy with attractive data reports and visuals designed just for your Audience."
+        content="We aim to transform mainstream media using tech and high end coverage of events."
       />
       <meta property="og:url" content="https://fourbic.com/" />
       <meta property="og:image" content="" />
-      <meta property="og:site_name" content="CYMON by Fourbic" />
+      <meta property="og:site_name" content="Takeover Media by Shammah" />
       <meta property="fb:app_id" content="123456789" />
 
       <meta name="twitter:card" content="summary" />
-      <meta name="twitter:site" content="@fourb1c" />
+      <meta name="twitter:site" content="@steveshammah_" />
       <meta name="twitter:creator" content="@steveshammah_" />
-      <meta name="twitter:url" content="https://twitter.com/fourb1c" />
+      <meta name="twitter:url" content="https://twitter.com/steveshammah_" />
       <meta
         name="twitter:title"
-        content="Sustainability starts with #data, We are building a sustainable future, one data point at a time."
+        content="We aim to transform mainstream media using tech and high end coverage of events."
       />
       <meta
         name="twitter:description"
-        content="Sustainability starts with #data, We are building a sustainable future, one data point at a time."
+        content="We aim to transform mainstream media using tech and high end coverage of events."
       />
-      <meta name="twitter:image" content="https://twitter.com/fourb1c/photo" />
+      <meta
+        name="twitter:image"
+        content="https://twitter.com/steveshammah_/photo"
+      />
 
       <meta name="apple-mobile-web-app-capable" content="yes" />
       <meta
         name="apple-mobile-web-app-status-bar-style"
         content="black-translucent"
       />
-      <meta name="apple-mobile-web-app-title" content="CYMON" />
+      <meta name="apple-mobile-web-app-title" content="Takeover Media" />
 
       <meta name="mobile-web-app-capable" content="yes" />
       <meta name="theme-color" content="#F16722" />
 
-      <link rel="canonical" href="https://fourbic.com/" key="canonical" />
+      <link
+        rel="canonical"
+        href="https://takeover.vercel.app"
+        key="canonical"
+      />
     </Head>
   );
 }
